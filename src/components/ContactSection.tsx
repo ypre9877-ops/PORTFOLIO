@@ -75,44 +75,55 @@ export const ContactSection = () => {
             </div>
           </div>
 
-          <form onSubmit={handleSubmit} className="space-y-6">
-            <div>
-              <Input
-                placeholder="Your Name"
-                value={formData.name}
-                onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                required
-                className="bg-card border-border focus:border-primary"
-              />
-            </div>
-            <div>
-              <Input
-                type="email"
-                placeholder="Your Email"
-                value={formData.email}
-                onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                required
-                className="bg-card border-border focus:border-primary"
-              />
-            </div>
-            <div>
-              <Textarea
-                placeholder="Your Message"
-                value={formData.message}
-                onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-                required
-                rows={6}
-                className="bg-card border-border focus:border-primary resize-none"
-              />
-            </div>
-            <Button 
-              type="submit"
-              className="w-full bg-primary hover:bg-primary/90 text-primary-foreground font-semibold"
-            >
-              <Send className="w-4 h-4 mr-2" />
-              Send Message
-            </Button>
-          </form>
+          <form
+            method="POST"
+          data-netlify="true"
+        name="contact"
+  className="space-y-6"
+>
+  {/* Required for Netlify */}
+  <input type="hidden" name="form-name" value="contact" />
+
+  <Input
+    placeholder="Your Name"
+    name="name"
+    value={formData.name}
+    onChange={(e) =>
+      setFormData({ ...formData, name: e.target.value })
+    }
+    required
+    className="bg-card border-border focus:border-primary"
+  />
+
+  <Input
+    type="email"
+    placeholder="Your Email"
+    name="email"
+    value={formData.email}
+    onChange={(e) =>
+      setFormData({ ...formData, email: e.target.value })
+    }
+    required
+    className="bg-card border-border focus:border-primary"
+  />
+
+  <Textarea
+    placeholder="Your Message"
+    name="message"
+    value={formData.message}
+    onChange={(e) =>
+      setFormData({ ...formData, message: e.target.value })
+    }
+    required
+    rows={6}
+    className="bg-card border-border focus:border-primary resize-none"
+  />
+
+  <Button type="submit" className="w-full">
+    Send Message
+  </Button>
+</form>
+
         </div>
       </div>
     </section>
