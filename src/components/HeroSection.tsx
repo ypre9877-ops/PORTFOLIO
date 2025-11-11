@@ -29,7 +29,7 @@ transition-all duration-300 hover:border-primary hover:shadow-[0_0_25px_rgba(0,2
   transition-all duration-300 hover:border-primary hover:shadow-[0_0_25px_rgba(0,255,150,0.25)] hover:-translate-y-1">
 
     <div className="text-center">
-      <div className="text-5xl font-semibold text-primary mb-1">6+</div>
+      <div className="text-5xl font-semibold text-primary mb-1">10+</div>
       <div className="text-xs text-muted-foreground uppercase tracking-wide">
         Years of Experience
       </div>
@@ -38,7 +38,7 @@ transition-all duration-300 hover:border-primary hover:shadow-[0_0_25px_rgba(0,2
     <div className="h-10 w-px bg-primary/30"></div>
 
     <div className="text-center">
-      <div className="text-5xl font-semibold text-primary mb-1">100+</div>
+      <div className="text-5xl font-semibold text-primary mb-1">50+</div>
       <div className="text-xs text-muted-foreground uppercase tracking-wide">
         Projects Completed Worldwide
       </div>
