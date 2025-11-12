@@ -23,28 +23,26 @@ transition-all duration-300 hover:border-primary hover:shadow-[0_0_25px_rgba(0,2
           that drive results.
         </p>
 
-        {/* ✅ Stats Grid Matches Certificate Card Style */}
-       <div className="flex justify-center mb-10">
-  <div className="flex items-center gap-16 bg-card border border-primary/30 rounded-xl px-10 py-6 
+        {/* ✅ Two Separate Boxes for Stats */}
+      <div className="flex flex-col sm:flex-row justify-center items-center gap-6 mb-10">
+  {/* Box 1 */}
+  <div className="flex flex-col items-center justify-center bg-card border border-primary/30 rounded-xl px-10 py-6 
   transition-all duration-300 hover:border-primary hover:shadow-[0_0_25px_rgba(0,255,150,0.25)] hover:-translate-y-1">
-
-    <div className="text-center">
-      <div className="text-5xl font-semibold text-primary mb-1">10+</div>
-      <div className="text-xs text-muted-foreground uppercase tracking-wide">
-        Years of Experience in different field
-      </div>
+    <div className="text-5xl font-semibold text-primary mb-1">10+</div>
+    <div className="text-xs text-muted-foreground uppercase tracking-wide text-center">
+      Years of Experience in different field
     </div>
-
-    <div className="h-10 w-px bg-primary/30"></div>
-
-    <div className="text-center">
-      <div className="text-5xl font-semibold text-primary mb-1">50+</div>
-      <div className="text-xs text-muted-foreground uppercase tracking-wide">
-        Projects Completed Worldwide
-      </div>
-    </div>
-
   </div>
+
+  {/* Box 2 */}
+  <div className="flex flex-col items-center justify-center bg-card border border-primary/30 rounded-xl px-10 py-6 
+  transition-all duration-300 hover:border-primary hover:shadow-[0_0_25px_rgba(0,255,150,0.25)] hover:-translate-y-1">
+    <div className="text-5xl font-semibold text-primary mb-1">50+</div>
+    <div className="text-xs text-muted-foreground uppercase tracking-wide text-center">
+      Projects Completed Worldwide
+    </div>
+  </div>
+</div>
 </div>
 
 
