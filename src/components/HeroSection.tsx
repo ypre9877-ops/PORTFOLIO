@@ -31,7 +31,7 @@ transition-all duration-300 hover:border-primary hover:shadow-[0_0_25px_rgba(0,2
     <div className="text-center">
       <div className="text-5xl font-semibold text-primary mb-1">10+</div>
       <div className="text-xs text-muted-foreground uppercase tracking-wide">
-        Years of Experience
+        Years of Experience in different field
       </div>
     </div>
 
