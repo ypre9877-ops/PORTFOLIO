@@ -1,9 +1,9 @@
+import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Mail, Phone, MapPin } from "lucide-react";
 import { toast } from "sonner";
-import { useState } from "react";
 
 export const ContactSection = () => {
   const [formData, setFormData] = useState({
@@ -12,13 +12,14 @@ export const ContactSection = () => {
     message: "",
   });
 
-  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
 
-    const form = e.currentTarget;
+    const form = e.target;
     const formDataToSend = new FormData(form);
 
     try {
+      // Send form data to Netlify
       await fetch("/", {
         method: "POST",
         body: formDataToSend,
@@ -37,7 +38,7 @@ export const ContactSection = () => {
       className="min-h-screen flex items-center justify-center px-8 py-20"
     >
       <div className="max-w-4xl w-full">
-        {/* Header */}
+        {/* Section Header */}
         <div className="mb-12">
           <span className="inline-block px-4 py-2 rounded-full border border-primary/30 text-primary text-sm font-medium mb-6">
             CONTACT
@@ -47,7 +48,6 @@ export const ContactSection = () => {
           </h2>
         </div>
 
-        {/* Content */}
         <div className="grid md:grid-cols-2 gap-12">
           {/* Contact Info */}
           <div className="space-y-6">
@@ -112,7 +112,7 @@ export const ContactSection = () => {
             onSubmit={handleSubmit}
             className="space-y-6"
           >
-            {/* Hidden input required by Netlify */}
+            {/* 🔒 Hidden field for Netlify */}
             <input type="hidden" name="form-name" value="contact" />
 
             <Input
