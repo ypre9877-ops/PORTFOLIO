@@ -49,7 +49,7 @@ export const SkillsSection = () => {
             <div className="text-muted-foreground">Happy Clients</div>
           </div>
           <div className="bg-card border border-border rounded-2xl p-6 hover:border-primary/50 transition-all">
-            <div className="text-3xl font-bold text-gradient mb-2">6+</div>
+            <div className="text-3xl font-bold text-gradient mb-2">10+</div>
             <div className="text-muted-foreground">Years Experience</div>
           </div>
         </div>
