@@ -75,7 +75,7 @@ export const ProfileSidebar = () => {
       </div>
 
       <div className="text-xs text-muted-foreground text-center">
-        © 2024 Safiqul Islam. All Rights Reserved
+        © 2025 Safiqul Islam. All Rights Reserved
       </div>
     </aside>
   );
